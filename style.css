@@ -1,0 +1,45 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0d1117;
+  overflow: hidden;
+  font-family: monospace;
+}
+
+canvas {
+  display: block;
+}
+
+#hud {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  color: #e8d44d;
+  z-index: 10;
+}
+
+#dashboard {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.dbtn {
+  padding: 8px 14px;
+  border: 1px solid #e8d44d;
+  background: transparent;
+  color: #e8d44d;
+  cursor: pointer;
+}
