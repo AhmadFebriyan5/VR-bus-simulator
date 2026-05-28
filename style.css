@@ -1,0 +1,73 @@
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: #0d1117; overflow: hidden; font-family: monospace; }
+canvas { display: block; }
+#hud {
+  position: fixed; top: 12px; left: 12px;
+  color: #e8d44d; font-size: 11px; line-height: 2;
+  text-shadow: 0 0 6px #e8d44d88; pointer-events: none;
+  z-index: 5;
+}
+#speedometer {
+  position: fixed; bottom: 70px; right: 20px;
+  width: 110px; height: 110px; pointer-events: none;
+  z-index: 5;
+}
+#gear {
+  position: fixed; bottom: 70px; right: 140px;
+  color: #e8d44d; font-size: 22px; font-family: monospace;
+  text-shadow: 0 0 10px #e8d44d; line-height: 1;
+  z-index: 5;
+}
+#gear-label { font-size: 10px; color: #e8d44d88; }
+#dashboard {
+  position: fixed; bottom: 0; left: 0; right: 0; height: 60px;
+  background: rgba(10,8,5,0.95); border-top: 1px solid #333;
+  display: flex; align-items: center; justify-content: center;
+  gap: 6px; padding: 0 12px; z-index: 5;
+  overflow-x: auto;
+}
+.dbtn {
+  background: rgba(232,212,77,0.08);
+  border: 1px solid rgba(232,212,77,0.3);
+  color: #e8d44d; padding: 6px 14px;
+  font-size: 11px; font-family: monospace;
+  cursor: pointer; border-radius: 4px;
+  transition: all 0.15s; white-space: nowrap;
+}
+.dbtn:hover { background: rgba(232,212,77,0.22); border-color: #e8d44d; }
+.dbtn.active { background: rgba(232,212,77,0.25); border-color: #e8d44d; box-shadow: 0 0 8px #e8d44d88; }
+#vr-btn {
+  background: #e8d44d;
+  color: #0d1117;
+  font-weight: bold;
+  border: 1px solid #e8d44d;
+}
+#vr-btn:hover {
+  background: #fff;
+  color: #0d1117;
+}
+#msg {
+  position: fixed; top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff; font-size: 13px; font-family: monospace;
+  background: rgba(0,0,0,0.8); padding: 10px 20px;
+  border-radius: 6px; border: 1px solid rgba(232,212,77,0.3);
+  pointer-events: none; opacity: 0; transition: opacity 0.3s;
+  z-index: 10; text-align: center;
+}
+#controls-hint {
+  position: fixed; top: 12px; right: 12px;
+  color: rgba(232,212,77,0.6); font-size: 10px;
+  font-family: monospace; text-align: right; line-height: 1.9;
+  pointer-events: none; z-index: 5;
+}
+#vrgaze-hint {
+  position: fixed; bottom: 80px; left: 50%;
+  transform: translateX(-50%);
+  color: #00ffff; font-size: 11px; font-family: monospace;
+  text-shadow: 0 0 8px #00ffff88;
+  background: rgba(0,0,0,0.7); padding: 6px 12px;
+  border-radius: 20px; pointer-events: none;
+  display: none; z-index: 5;
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VR Bus Simulator Modular</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<canvas id="c"></canvas>
+
+<div id="hud">
+  <div id="h-speed">SPD: 0 km/h</div>
+  <div id="h-gear">GIGI: N</div>
+  <div id="h-route">RUTE: Ampera - Jakabaring</div>
+  <div id="h-stop">HALTE BERIKUT: -</div>
+  <div id="h-pass">PENUMPANG: 0</div>
+  <div id="h-dist">JARAK: 0 m</div>
+</div>
+
+<canvas id="speedometer"></canvas>
+<div id="gear">N<br><span id="gear-label">GIGI</span></div>
+<div id="msg"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="js/setup.js"></script>
+<script src="js/world.js"></script>
+<script src="js/bus.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/game.js"></script>
+</body>
+</html>
